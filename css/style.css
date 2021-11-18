@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+.checks{
+    color: white;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+
+
+
+.container{
+    margin: auto;
+    width: 500px;
+    height: 500px;
+    /* border: 1px solid white; */
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box{
+    border: 1px solid white;
+    color: white; 
+}
+
+.easy{
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    line-height: 50px;
+    text-align: center;
+}
+
+
+.cliccato-true{
+    background-color: white;
+}
