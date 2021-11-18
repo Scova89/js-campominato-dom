@@ -22,8 +22,17 @@ function play(){
    }
 
    boxForSide = Math.sqrt(boxNumber);
+
+   const size = `calc(100% / ${boxForSide})`;
    
-   for(let i = 1; i <= boxNumber; i++)
+   let items ='';
+   for(let i = 1; i <= boxNumber; i++){
+       items +=`
+       <div class="box" style="width:${size}"; style="height:${size}">${i}</div>`;
+   }
+   
+   const quadrati = document.querySelector('.container');
+   quadrati.innerHTML = items;
 }
 
 
