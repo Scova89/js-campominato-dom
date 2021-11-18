@@ -33,6 +33,9 @@ function play(){
 
         for(let i = 1; i <= boxNumber; i++){
             const nodo = document.createElement('div');
+            nodo.addEventListener('click', function(){
+               this.classList.add('cliccato-true');
+            })
             nodo.className ='box';
             nodo.innerHTML = i;
             nodo.style.width = size;
