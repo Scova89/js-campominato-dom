@@ -10,6 +10,13 @@ function play(){
 
    let boxNumber;
    let boxForSide;
+
+   const numBombe = 16;
+
+   function genBombe(){
+      const arrayBombe = [];
+      while()
+   }
    
    switch(livSelezionato){
         case 1:
