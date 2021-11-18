@@ -1,10 +1,11 @@
-const container = document.querySelector('.container');
+
 
 document.getElementById('play').addEventListener('click', function(){
     play();
 })
 
 function play(){
+   document.querySelector('.container').innerHTML = ''; 
    const livSelezionato = parseInt(document.getElementById('level').value);
 
    let boxNumber;
@@ -23,16 +24,25 @@ function play(){
 
    boxForSide = Math.sqrt(boxNumber);
 
-   const size = `calc(100% / ${boxForSide})`;
-   
-   let items ='';
-   for(let i = 1; i <= boxNumber; i++){
-       items +=`
-       <div class="box" style="width:${size}"; style="height:${size}">${i}</div>`;
+   addBoxes ();
+
+   function addBoxes(){
+        const size = `calc(100% / ${boxForSide})`;
+        const container = document.querySelector('.container');
+        
+
+        for(let i = 1; i <= boxNumber; i++){
+            const nodo = document.createElement('div');
+            nodo.className ='box';
+            nodo.innerHTML = i;
+            nodo.style.width = size;
+            nodo.style.height = size;
+
+            container.appendChild(nodo);
+              
+        }
    }
    
-   const quadrati = document.querySelector('.container');
-   quadrati.innerHTML = items;
 }
 
 
@@ -40,30 +50,3 @@ function play(){
 
 
 
-// function addBox(){
-//     const nodo = document.createElement('div');
-//     nodo.className ='box';
-//     return nodo;
-// }
-
-// for(let i = 1; i <= 100; i++){
-//     const divBox = addBox();
-//     divBox.innerHTML = i;
-//     container.appendChild(divBox);
-//     divBox.addEventListener('click', function(){
-//       divBox.classList.add('cliccato-true');
-//       console.log('click');
-//     });
-    
-// }
-
-
-
-
-
-// ***** soluzione col radio button
-// const radioButton = document.querySelector('.check');
-// radioButton.addEventListener('click', function(){
-//   alert(radioButton.value);
-// })
-// console.log(radioButton)
