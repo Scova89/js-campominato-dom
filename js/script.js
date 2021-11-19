@@ -28,6 +28,8 @@ function play(){
    const bombs = genBombe();
    console.log(bombs);
 
+   
+
    function genBombe(){
       const arrayBombe = [];
       while(arrayBombe.length < numBombe){
@@ -42,7 +44,6 @@ function play(){
    function getRndInteger(min, max) {
       return Math.floor(Math.random() * (max - min + 1) ) + min;
    }
-   
    
 
    
@@ -70,6 +71,8 @@ function play(){
               
         }
    }
+
+   
    
 }
 

@@ -8,13 +8,24 @@ body{
     background-color: black;
 }
 
-.checks{
+/* .checks{
     color: white;
     margin-top: 20px;
     margin-left: 40px;
+} */
+
+header{
+    display: flex;
+    justify-content: center;
+    color: white;
 }
 
-
+.container-header{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 
 .container{
