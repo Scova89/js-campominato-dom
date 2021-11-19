@@ -13,25 +13,43 @@ function play(){
 
    const numBombe = 16;
 
+   switch(livSelezionato){
+      case 1:
+         boxNumber = 100;
+         break;
+      case 2:
+         boxNumber = 81;
+         break;
+      case 3:
+          boxNumber = 49;
+   }
+
+
+   const bombs = genBombe();
+   console.log(bombs);
+
    function genBombe(){
       const arrayBombe = [];
-      while()
+      while(arrayBombe.length < numBombe){
+         const numRandom = getRndInteger(1,boxNumber);
+         if(!arrayBombe.includes(numRandom)){
+            arrayBombe.push(numRandom);
+         }
+      }
+      return arrayBombe;
+   }
+
+   function getRndInteger(min, max) {
+      return Math.floor(Math.random() * (max - min + 1) ) + min;
    }
    
-   switch(livSelezionato){
-        case 1:
-           boxNumber = 100;
-           break;
-        case 2:
-           boxNumber = 81;
-           break;
-        case 3:
-            boxNumber = 49;
-   }
+   
+
+   
 
    boxForSide = Math.sqrt(boxNumber);
 
-   addBoxes ();
+   addBoxes();
 
    function addBoxes(){
         const size = `calc(100% / ${boxForSide})`;

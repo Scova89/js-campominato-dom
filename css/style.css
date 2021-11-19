@@ -45,3 +45,8 @@ body{
     background-color: white;
     color: black;
 }
+
+.cliccato-false{
+    background-color: red;
+    color: white;
+}
